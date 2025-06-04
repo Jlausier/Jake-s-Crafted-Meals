@@ -8,7 +8,14 @@
     body {
       margin: 0;
       font-family: 'Georgia', serif;
-      background-color: #0a0a0a;
+      background-color: #000;
+      background-image:
+        radial-gradient(2px 2px at 20% 30%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 70% 80%, #fff, transparent),
+        radial-gradient(1px 1px at 50% 50%, #888, transparent),
+        linear-gradient(to bottom, #0a0a2a 0%, #000 100%);
+      background-repeat: repeat;
+      background-size: 200px 200px, 300px 300px, 150px 150px, cover;
       color: #f4e9d8;
     }
     header {
@@ -47,6 +54,15 @@
     .menu li {
       padding: 10px 0;
       border-bottom: 1px solid #444;
+      padding-left: 20px;
+    }
+    .menu li > strong {
+      font-size: 1.3rem;
+      color: #c99d46;
+    }
+    .menu li ul li {
+      font-size: 0.9rem;
+      color: #f4e9d8;
     }
     footer {
       background-color: #1e1e1e;
@@ -76,54 +92,61 @@
   <div class="section menu">
     <h2>Our Menu</h2>
     <ul>
-      <li><strong>Odin's Feast:</strong> 2 Succulent Boar volcano shanks marinatd in a rich blend of herbs,red wine, and honey, slow cooked to perfection
+      <li><strong>Odin's Feast:</strong> Slow cooked Boar volcano shanks marinated in a rich blend of herbs, red wine, and honey
         <ul>
-            <li> Served with roasted vegatabeles, broth, and two pieces of flatbread</li>
-            <li>Price:$20 </li>
+          <li>Served with roasted vegetables, broth, and two pieces of flatbread</li>
+          <li>Price: $20</li>
         </ul>
       </li>
-      <li><strong>Thor's Thunder:</strong>Salmon Fillet grilled with a sweet and tangy lemon-honey glaze, garnished with fresh dill
+      <li><strong>Thor's Thunder:</strong> Salmon fillet grilled with a sweet and tangy lemon-honey glaze, garnished with fresh dill
         <ul>
-            <li> Served with lemon slices, and a scoop of lemon honey sauce, and 2 peices of flatbread</li>
-            <li>Price:$18 </li>
+          <li>Served with lemon slices, a scoop of lemon honey sauce, and 2 pieces of flatbread</li>
+          <li>Price: $18</li>
         </ul>
-     </li>
-      <li><strong>Freya's Delight:</strong> A hearty batch of egg noddles, and slow cooked meaballs sauteed in herbs and beef broth mix, topped with parsley
+      </li>
+      <li><strong>Freya's Delight:</strong> Egg noodles and slow cooked meatballs sautéed in herbs and beef broth, topped with parsley
         <ul>
-            <li> Served with 2 pieces of flatbread </li>
-            <li>Price:$10 </li>
+          <li>Served with 2 pieces of flatbread</li>
+          <li>Price: $10</li>
         </ul>
-    </li>
-      <li><strong>Loki's Lure:</strong> Cod smoked over a charcoal grill, coated with a mix of herbs, offering a rich smokey floavor
+      </li>
+      <li><strong>Loki's Lure:</strong> Cod smoked over a charcoal grill, coated with a mix of herbs
         <ul>
-            <li> Served with a side Dill and mustard Cream sauce , and 2 pieces of flatbread</li>
-            <li>Price:$12 </li>
+          <li>Served with a side of dill and mustard cream sauce, and 2 pieces of flatbread</li>
+          <li>Price: $12</li>
         </ul>
-    </li>
-    
-      <li><strong>Jormungunder's Sacrifice:</strong> A hearty Scandinavian hash featuring diced pork belly, onions, and potatoes, all pan fried to cripst perfection 
+      </li>
+      <li><strong>Jormungandr's Sacrifice:</strong> Potatoe Bowl diced with pork belly, onions, pan-fried 
         <ul>
-            <li> Served with a fried egg on top accompanied by pickled beetroot and gherkins</li>
-            <li>Price:$12</li>
+          <li>Served with a fried egg on top, pickled beetroot, and gherkins</li>
+          <li>Price: $12</li>
         </ul>
-    </li>
-    <li><strong>Valkyrie's Valor:</strong> A full order of our homemade versitile Flatbread, perfect for extra dipping or on it own
+      </li>
+      <li><strong>Valkyrie's Valor:</strong> Homemade versatile flatbread, 4 pieces
         <ul>
-            <li> Served with a side of our homemade honey mead sauce</li>
-            <li>Price:$5</li>
+          <li>Served with our honey mead dipping sauce</li>
+          <li>Price: $5</li>
         </ul>
-    </li>
-    <li>Dessert:
-      <li><strong>Skadi's Snow:</strong>A cripsy, Golden Norweigian-style waflle with a hint of cardamom
+      </li>
+      <li><strong>Skadi's Snow:</strong> A crispy, golden Norwegian-style waffle with a hint of cardamom
         <ul>
-            <li> Served with a warm ddollop of lingonberry jam, a dussting of powdered suger</li>
-            <ul>Optional add ons:<li>Whipped cream</li>
-                <li>Drizzle of honey or caramel</li>
+          <li>Served with warm lingonberry jam and powdered sugar</li>
+          <li>Optional add-ons:
+            <ul>
+              <li>Whipped cream $.50</li>
+              <li>Drizzle of honey or caramel $.50</li>
+            </ul>
+          </li>
+          <li>Price: $6</li>
         </ul>
-            <li>Price:$6</li>
-      </ul>
-    </li>
-</li>
+      </li>
+      <li><strong>Drinks:</strong>
+        <ul>
+          <li>Canned Soda — $1.50</li>
+          <li>Gold Peak Tea (Bottle) — $2.00</li>
+          <li>Bottled Water — $2.50</li>
+        </ul>
+      </li>
     </ul>
   </div>
 
@@ -132,8 +155,4 @@
   </footer>
 </body>
 </html>
-<script>
-  // Example JavaScript for future interactivity
-  document.addEventListener('DOMContentLoaded', () => {
-    console.log('Valhalla\'s Banquet Wagon is ready to serve!');
-  });
+
