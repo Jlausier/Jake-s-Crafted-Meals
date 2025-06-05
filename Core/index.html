@@ -3,9 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Valhalla's Banquet Wagon</title>
+  <title>Valhalla's Banquet Wagon | Norse-Themed Food Truck & Catering</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Valhalla's Banquet Wagon is a Norse-themed food truck based in Florida offering authentic Scandinavian-inspired meals, flatbreads, and catering services." />
+  <meta name="keywords" content="food truck, Norse food, Valhalla's Banquet Wagon, Scandinavian food, catering Florida, Norse-themed meals, restaurant on wheels, food truck near me" />
+  <meta name="author" content="Jacob Lausier, Jake's Crafted Meals L.L.C" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Valhalla's Banquet Wagon" />
+  <meta property="og:description" content="Experience Norse-inspired cuisine from a Florida-based food truck. Follow us on Instagram for weekly locations." />
+  <meta property="og:image" content="valhalla-logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Valhalla's Banquet Wagon" />
+  <meta name="twitter:description" content="Florida’s Norse-themed food truck. Legendary flavor, mobile feasting." />
+  <meta name="twitter:image" content="valhalla-logo.png" />
+
   <style>
+    @keyframes starScroll {
+      from { background-position: 0 0, 0 0, 0 0, 0 0; }
+      to {
+        background-position:
+          200px 200px,
+          300px 300px,
+          150px 150px,
+          0 0;
+      }
+    }
+
+ @keyframes aurora {
+  0% {
+    transform: translateX(-5%) translateY(0) scaleX(1.2) scaleY(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateX(5%) translateY(-10%) scaleX(1.4) scaleY(1.1) rotate(1deg);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateX(-5%) translateY(0) scaleX(1.2) scaleY(1);
+    opacity: 0.3;
+  }
+
+}
+
     body {
+      position: relative;
       margin: 0;
       font-family: 'Georgia', serif;
       background-color: #000;
@@ -16,21 +63,47 @@
         linear-gradient(to bottom, #0a0a2a 0%, #000 100%);
       background-repeat: repeat;
       background-size: 200px 200px, 300px 300px, 150px 150px, cover;
+      animation: starScroll 15s linear infinite;
       color: #f4e9d8;
     }
+
+body::before {
+  content: "";
+  position:  absolute;
+  top: 10%;
+  left: 0;
+  width: 80vw;
+  height: 25vh;
+  background:
+    radial-gradient(ellipse at top, rgba(16, 238, 8, 0.711), transparent 70%),
+    radial-gradient(ellipse at 40% 20%, rgba(246, 13, 242, 0.386), transparent 60%),
+    radial-gradient(ellipse at 70% 30%, rgba(128, 0, 255, 0.856), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  animation: aurora 14s ease-in-out infinite;
+  mix-blend-mode: screen;
+  filter: blur(18px);
+}
     header {
-      background-color: #1e1e1e;
+     
+      background-size: cover;
+      background-position: center;
       padding: 20px;
-      text-align: center;
+      display: flex;
+      align-items: center;
       border-bottom: 3px solid #c99d46;
     }
     header img {
-      width: 120px;
+      width: 150px;
+      height: auto;
+      margin-right: 20px;
     }
-    h1 {
+    header h1 {
       font-size: 2.5rem;
       color: #c99d46;
-      margin: 10px 0;
+      margin: 0;
+      flex-grow: 1;
+      padding-left: 25%;
     }
     .section {
       padding: 40px 20px;
@@ -46,6 +119,7 @@
     .menu h2, .about h2, .catering h2 {
       color: #c99d46;
       font-size: 2rem;
+      text-align: center;
     }
     .menu ul {
       list-style: none;
@@ -74,20 +148,20 @@
 </head>
 <body>
   <header>
-    <img src="image.png" alt="Valhalla's Banquet Wagon Logo" />
+    <img src="valhalla-logo.png" alt="Valhalla's Banquet Wagon Logo - Norse-themed Food Truck" />
     <h1>Valhalla's Banquet Wagon</h1>
-    <p>by Jake's Crafted Meals L.L.C</p>
   </header>
 
-  <div class="section about">
-    <h2>Meet the Founder</h2>
-    <p>Valhalla's Banquet Wagon was founded by Jacob Lausier, a young entrepreneur with over a decade of experience in the service industry. From his early days as a line cook to managing three restaurants within a bustling hotel, Jacob has brought his passion, leadership, and love for Norse mythology to the streets with a culinary vision worthy of the gods.</p>
-  </div>
+  <main>
+    <section class="section about">
+      <h2>Meet the Founder</h2>
+      <p>Valhalla's Banquet Wagon was founded by Jacob Lausier, a young entrepreneur with over a decade of experience in the service industry. From his early days as a line cook to managing three restaurants within a bustling hotel, Jacob has brought his passion, leadership, and love for Norse mythology to the streets with a culinary vision worthy of the gods.</p>
+    </section>
 
-  <div class="section catering">
-    <h2>Catering & Truck Schedule</h2>
-    <p>We cater events of all sizes — from intimate gatherings to large-scale feasts! Let Valhalla's Banquet Wagon bring the taste of the gods to your next celebration. We post our weekly location and hours on our <strong><a href="https://instagram.com" target="_blank" style="color:#c99d46;">Instagram</a></strong>, so follow us to find out where the wagon will land next!</p>
-  </div>
+    <section class="section catering">
+      <h2>Catering & Food Truck Schedule</h2>
+      <p>We cater events of all sizes — from intimate gatherings to large-scale feasts! Let Valhalla's Banquet Wagon bring the taste of the gods to your next celebration. We post our weekly location and hours on our <strong><a href="https://www.instagram.com/valhallabanquetwagon/" target="_blank" style="color:#c99d46;" rel="noopener noreferrer">Instagram</a></strong>, so follow us to find out where the wagon will land next!</p>
+    </section>
 
   <div class="section menu">
     <h2>Our Menu</h2>
@@ -133,8 +207,8 @@
           <li>Served with warm lingonberry jam and powdered sugar</li>
           <li>Optional add-ons:
             <ul>
-              <li>Whipped cream $.50</li>
-              <li>Drizzle of honey or caramel $.50</li>
+              <li>Whipped cream </li>
+              <li>Drizzle of honey or caramel </li>
             </ul>
           </li>
           <li>Price: $6</li>
