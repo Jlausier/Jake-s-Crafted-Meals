@@ -31,28 +31,21 @@ const server = http.createServer((req, res) => {
 
   const contentType = mimeTypes[extname] || 'application/octet-stream';
 
-  fs.readFile(filePath, (err, content) => {
-    if (err) {
-      if (err.code === 'ENOENT') {
-        // Fallback to index.html (for SPA routes)
-        fs.readFile(path.join(__dirname, 'core', 'index.html'), (error, content) => {
-          if (error) {
-            res.writeHead(500);
-            res.end('Server error');
-          } else {
-            res.writeHead(200, { 'Content-Type': 'text/html' });
-            res.end(content, 'utf-8');
-          }
-        });
-      } else {
-        res.writeHead(500);
-        res.end(`Server error: ${err.code}`);
-      }
+ fs.readFile(filePath, (err, content) => {
+  if (err) {
+    console.error('Error reading file:', err);
+    if (err.code === 'ENOENT') {
+      res.writeHead(404, { 'Content-Type': 'text/html' });
+      res.end('<h1>404 Not Found</h1>');
     } else {
-      res.writeHead(200, { 'Content-Type': contentType });
-      res.end(content, 'utf-8');
+      res.writeHead(500);
+      res.end(`Server error: ${err.code}`);
     }
-  });
+  } else {
+    res.writeHead(200, { 'Content-Type': contentType });
+    res.end(content);  // no encoding here
+  }
+});
 });
 
 server.listen(PORT, () => {
