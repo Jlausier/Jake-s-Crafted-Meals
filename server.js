@@ -13,7 +13,7 @@ process.on('unhandledRejection', err => {
 });
 
 const server = http.createServer((req, res) => {
-  let filePath = path.join(__dirname, 'core', req.url === '/' ? 'index.html' : req.url);
+  let filePath = path.join(__dirname, 'Core', req.url === '/' ? 'index.html' : req.url);
 
   console.log(`Serving file: ${filePath}`);  // log request
 
