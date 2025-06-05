@@ -4,6 +4,14 @@ const path = require('path');
 
 const PORT = process.env.PORT || 3000;
 
+process.on('uncaughtException', err => {
+  console.error('Uncaught Exception:', err);
+});
+
+process.on('unhandledRejection', err => {
+  console.error('Unhandled Rejection:', err);
+});
+
 const server = http.createServer((req, res) => {
   let filePath = path.join(__dirname, 'core', req.url === '/' ? 'index.html' : req.url);
 
