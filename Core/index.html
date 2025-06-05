@@ -51,9 +51,11 @@
 
 }
 @media (max-width: 768px) {
-  .header h1 {
-    font-size: 1.8rem; /* smaller font size on phones */
-    padding-left: 20px; /* smaller padding on phones */
+  header h1 {
+    font-size: 1.5rem;
+    padding-left: 10px; /* less padding for small screens */
+    white-space: normal; /* allow wrapping if needed */
+    text-align: left;
   }
 }
     body {
@@ -103,14 +105,15 @@ body::before {
       height: auto;
       margin-right: 20px;
     }
-    header h1 {
-      font-size: 2.5rem;
-      color: #c99d46;
-      margin: 0;
-      flex-grow: 1;
-      padding-left: 25%;
-     
-    }
+   header h1 {
+  font-size: 2.5rem;
+  color: #c99d46;
+  margin: 0;
+  padding-left: 25%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
     .section {
       padding: 40px 20px;
       max-width: 1000px;
